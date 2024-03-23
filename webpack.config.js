@@ -1,4 +1,5 @@
-const MiniCssExractPlugin = require('mini-css-extract-plugin')
+const MiniCssExractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -6,7 +7,14 @@ module.exports = {
     output: {
         filename: 'main.js'
     },
-    plugins: [new MiniCssExractPlugin],
+    plugins: [ 
+        new MiniCssExractPlugin(), 
+        new HtmlWebpackPlugin({options: {
+            template: "../NPM/src/index.pug",
+            filename: "index.html",
+        }
+        }),
+    ],
 
     module: {
         rules: [
@@ -21,6 +29,10 @@ module.exports = {
                     },
                     'css-loader',
                 ]
+            },
+            {
+                test: /\.pug$/,
+                use: 'pug-loader'
             }
         ]
     }
