@@ -1,0 +1,16 @@
+{
+    "cats": [
+        { "id": 1, "name": "Vasya", "color": "black" },
+        { "id": 2, "name": "Murka", "color": "tricolor" },
+        { "id": 3, "name": "Grey", "color": "tortoiseshell" }
+    ],
+    "dogs": [
+        { "id": 1, "name": "Munk", "breed": "mongrel" },
+        { "id": 21, "name": "Black", "breed": "boxer" },
+        { "id": 3, "name": "Fifi", "breed": "laika" },
+        { "id": 4, "name": "Chantilly", "breed": "beagle" }
+    ],
+    "parrots": [
+        { "id": 1, "name": "Chick", "color": "green" }
+    ]
+}  
